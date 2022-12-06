@@ -10,6 +10,21 @@ const ReadingSchema = (sequelize, DataTypes) => {
     timestamps: false
   });
 
+  ReadingTable.associate = (models) => {
+    models.Book.belongsToMany(models.User, {
+      through: ReadingTable,
+      as: 'readings_books',
+      foreignKey: 'userId',
+      otherKey: 'bookId',
+    });
+    models.User.belongsToMany(models.Book, {
+      through: ReadingTable,
+      as: 'readings_users',
+      foreignKey: 'bookId',
+      otherKey: 'userId',
+    });
+  };
+
   return ReadingTable;
 }
 

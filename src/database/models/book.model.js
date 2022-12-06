@@ -10,18 +10,6 @@ const BookSchema = (sequelize, DataTypes) => {
     timestamps: false
   });
 
-  BookTable.associate = (models) => {
-    BookTable.hasMany(models.wish, {
-      as: 'book_wishes',
-      foreignKey: 'bookId'
-    });
-
-    BookTable.hasMany(models.reading, {
-      as: 'book_readings',
-      foreignKey: 'bookId'
-    });
-  };
-
   return BookTable;
 }
 

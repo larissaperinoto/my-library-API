@@ -10,18 +10,6 @@ const UserSchema = (sequelize, DataTypes) => {
     timestamps: false
   });
 
-  UserTable.associate = (models) => {
-    UserTable.hasMany(models.wish, {
-      as: 'user_wishes',
-      foreignKey: 'userId'
-    });
-
-    UserTable.hasMany(models.reading, {
-      as: 'user_readings',
-      foreignKey: 'userId'
-    });
-  };
-
   return UserTable;
 }
 
