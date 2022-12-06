@@ -9,6 +9,21 @@ const WishSchema = (sequelize, DataTypes) => {
     timestamps: false
   });
 
+  WishTable.associate = (models) => {
+    models.Book.belongsToMany(models.User, {
+      through: WishTable,
+      as: 'wishes_books',
+      foreignKey: 'userId',
+      otherKey: 'bookId',
+    });
+    models.User.belongsToMany(models.Book, {
+      through: WishTable,
+      as: 'wishes_users',
+      foreignKey: 'bookId',
+      otherKey: 'userId',
+    });
+  };
+
   return WishTable;
 }
 
