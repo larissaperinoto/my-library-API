@@ -20,10 +20,6 @@ module.exports = {
       release: {
         allowNull: false,
         type: Sequelize.DATE
-      },
-      nationality: {
-        allowNull: false,
-        type: Sequelize.STRING
       }
     });
   },

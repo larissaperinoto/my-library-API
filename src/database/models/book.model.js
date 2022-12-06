@@ -3,7 +3,6 @@ const BookSchema = (sequelize, DataTypes) => {
     id: { type: DataTypes.INTEGER, primaryKey: true },
     title: DataTypes.STRING,
     author: DataTypes.STRING,
-    nationality: DataTypes.STRING,
     release: DataTypes.DATE
   }, {
     tableName: 'books',
