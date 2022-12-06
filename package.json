@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
+    "prestart": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
     "start": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
