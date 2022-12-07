@@ -3,9 +3,9 @@ const { Book } = require('../database/models');
 const findAll = async () => await Book.findAll();
 
 const insert = async (newBook) => {
-  const books = await Book.findAll();
+  const alredyExists = await Book.findOne({ where: { title: newBook.title } });
 
-  if (books.some((book) => book.title === newBook.title)) {
+  if (alredyExists) {
     return { message: 'Este livro já está cadastrado!' }
   }
 
