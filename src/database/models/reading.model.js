@@ -6,7 +6,7 @@ const ReadingSchema = (sequelize, DataTypes) => {
     finishedAt: DataTypes.DATE
   }, {
     tableName: 'readings',
-    underscored: true,
+    underscored: false,
     timestamps: false
   });
 
