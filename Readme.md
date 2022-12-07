@@ -107,7 +107,11 @@ Agora você possuí dois containers: `node_container`e o `db_container`. Entre n
 
         docker exec -it node_container bash
 
-Uma vez no terminal, crie o banco de dados com o sequelize usando o script `build`presente no **package.json**. Este script irá criar o banco, rodar as migrations e as seeders presentes na aplicação.
+Uma vez no terminal, faça a instalação das dependências do projeto.
+
+        npm install
+
+Crie o banco de dados com o sequelize usando o script `build`presente no **package.json**. Este script irá criar o banco, rodar as migrations e as seeders presentes na aplicação.
 
         npm run build
 
