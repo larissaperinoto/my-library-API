@@ -6,7 +6,6 @@ const UserSchema = (sequelize, DataTypes) => {
     password: DataTypes.STRING,
   }, {
     tableName: 'users',
-    underscored: true,
     timestamps: false
   });
 
