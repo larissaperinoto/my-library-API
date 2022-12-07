@@ -1,12 +1,10 @@
 const ReadingSchema = (sequelize, DataTypes) => {
   const ReadingTable = sequelize.define('Reading', {
-    id: { type: DataTypes.INTEGER, primaryKey: true },
-    userId: DataTypes.INTEGER,
-    bookId: DataTypes.INTEGER,
+    userId: { type: DataTypes.INTEGER, primaryKey: true },
+    bookId: { type: DataTypes.INTEGER, primaryKey: true },
     finishedAt: DataTypes.DATE
   }, {
     tableName: 'readings',
-    underscored: false,
     timestamps: false
   });
 
@@ -14,8 +12,8 @@ const ReadingSchema = (sequelize, DataTypes) => {
     models.Book.belongsToMany(models.User, {
       through: ReadingTable,
       as: 'readings_books',
-      foreignKey: 'userId',
-      otherKey: 'bookId',
+      foreignKey: 'bookId',
+      otherKey: 'userId',
     });
     models.User.belongsToMany(models.Book, {
       through: ReadingTable,

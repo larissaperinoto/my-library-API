@@ -6,9 +6,9 @@ const findByUserId = async (req, res) => {
 };
 
 const insert = async (req, res) => {
-  const insert = await wishesService.insert(req.body);
+  const insert = await wishesService.insert(req.body, req.params.id);
 
-  if (insert) return res.status(500).json(insert.message);
+  if (insert) return res.status(400).json(insert.message);
 
   return res.status(201).json('Livro inserido com sucesso');
 };

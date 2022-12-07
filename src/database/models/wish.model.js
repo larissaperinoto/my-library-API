@@ -1,11 +1,9 @@
 const WishSchema = (sequelize, DataTypes) => {
   const WishTable = sequelize.define('Wish', {
-    id: { type: DataTypes.INTEGER, primaryKey: true },
-    userId: DataTypes.INTEGER,
-    bookId: DataTypes.INTEGER
+    userId: { type: DataTypes.INTEGER, primaryKey: true },
+    bookId: { type: DataTypes.INTEGER, primaryKey: true }
   }, {
     tableName: 'wishes',
-    underscored: false,
     timestamps: false
   });
 
@@ -13,14 +11,14 @@ const WishSchema = (sequelize, DataTypes) => {
     models.Book.belongsToMany(models.User, {
       through: WishTable,
       as: 'wishes_books',
-      foreignKey: 'userId',
-      otherKey: 'bookId',
+      foreignKey: 'bookId',
+      otherKey: 'userId',
     });
     models.User.belongsToMany(models.Book, {
       through: WishTable,
       as: 'wishes_users',
-      foreignKey: 'bookId',
-      otherKey: 'userId',
+      foreignKey: 'userId',
+      otherKey: 'bookId',
     });
   };
 

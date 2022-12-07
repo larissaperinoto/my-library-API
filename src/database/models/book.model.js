@@ -6,7 +6,6 @@ const BookSchema = (sequelize, DataTypes) => {
     release: DataTypes.DATE
   }, {
     tableName: 'books',
-    underscored: true,
     timestamps: false
   });
 
