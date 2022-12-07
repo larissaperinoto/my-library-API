@@ -18,8 +18,9 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: password
       MYSQL_HOST: db
+      MYSQL_POR: 3306
       API_PORT: 3001
-
+      JWT_SECRET: my_secret
 
   db:
     container_name: db_container

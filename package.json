@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
+    "build": "npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
     "start": "nodemon .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +14,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "4.17",
+    "mysql2": "^2.3.3",
     "sequelize": "^6.26.0"
   },
   "devDependencies": {
