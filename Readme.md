@@ -78,6 +78,13 @@ A aplicação possuí algumas rotas cadastradas
 
 </details>
 
+<details>
+  <summary><strong>Diagrama de entidade relacionamento</strong></summary>
+  
+  ![Captura de tela de 2022-12-07 16-39-54](https://user-images.githubusercontent.com/98956659/206279930-69ab549f-57ae-4199-a2f3-b00b75c54975.png)
+
+</details>
+
 ## Validações
 
 Nossa aplicação precisa que algumas validações sejam feitas, precisamos garantir que as informações enviadas pelo usuário estejam adequadas ao chegarem na camada controler.
