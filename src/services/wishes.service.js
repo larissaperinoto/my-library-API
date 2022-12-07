@@ -1,6 +1,6 @@
 const { Wish } = require('../database/models');
 
-const findAll = async () => await Wish.findAll();
+const findByUserId = async (userId) => await Wish.findAll({  where: { userId } });
 
 const insert = async ({ bookId , userId }) => {
   const alredyExists = await Wish.findOne({ where: { userId, bookId }});
@@ -12,4 +12,4 @@ const insert = async ({ bookId , userId }) => {
   await Wish.create({ userId, bookId });
 };
 
-module.exports = { findAll, insert };
+module.exports = { findByUserId, insert };

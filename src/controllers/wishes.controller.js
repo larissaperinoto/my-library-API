@@ -1,7 +1,7 @@
 const { wishesService } = require('../services');
 
-const findAll = async (_req, res) => {
-  const wishes = await wishesService.findAll();
+const findByUserId = async (req, res) => {
+  const wishes = await wishesService.findByUserId(req.params.id);
   return res.status(200).json(wishes);
 };
 
@@ -13,4 +13,4 @@ const insert = async (req, res) => {
   return res.status(201).json('Livro inserido com sucesso');
 };
 
-module.exports = { findAll, insert };
+module.exports = { findByUserId, insert };

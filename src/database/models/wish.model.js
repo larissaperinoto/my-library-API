@@ -5,7 +5,7 @@ const WishSchema = (sequelize, DataTypes) => {
     bookId: DataTypes.INTEGER
   }, {
     tableName: 'wishes',
-    underscored: true,
+    underscored: false,
     timestamps: false
   });
 

@@ -3,7 +3,7 @@ const { wishesController } = require('../controllers');
 
 const router = express.Router();
 
-router.get('/', wishesController.findAll);
+router.get('/:id', wishesController.findByUserId);
 router.post('/', wishesController.insert);
 
 module.exports = router;
