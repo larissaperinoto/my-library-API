@@ -1,4 +1,4 @@
-# My Library API 📚
+Desenvolvido por [Larissa Perinoto](www.linkedin.com/in/larissaperinoto), © 2022.# My Library API 📚
 
 A API My Library foi construída para ser o back-end de uma aplicação que possuí uma base de dados de livros cadastrados e permite ao usuário, após a realização do login, cadastrar novos livros na base de dados, adicionar um livro na sua lista de leituras realizadas ou na sua lista de desejos.
 
@@ -131,3 +131,7 @@ Inicie o servidos com o script `start`
 **Obs.:** uma sugestão de como realizar as validações pode ser encontrada na branch `solved-exercise`. Execute o comando abaixo no seu terminal local.
   
        git checkout solved-exercise
+
+---
+
+Desenvolvido por [Larissa Perinoto](www.linkedin.com/in/larissaperinoto), © 2022.
